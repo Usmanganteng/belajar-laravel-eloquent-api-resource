@@ -48,3 +48,8 @@ Route::get('/products-paging', function (Request $request){
     $products = \App\Models\Product::paginate(perPage: 2, page: $page);
     return new \App\Http\Resources\ProductCollection($products);
 });
+
+Route::get('/products-debug/{id}', function ($id){
+    $product = \App\Models\Product::find($id);
+    return new \App\Http\Resources\ProductDebugResource($product);
+});

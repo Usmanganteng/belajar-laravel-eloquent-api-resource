@@ -2,11 +2,16 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProductDebugResource extends JsonResource
 {
+
+    public $additional = [
+        "author" => "Aldizar"
+    ];
     /**
      * Transform the resource into an array.
      *
@@ -14,6 +19,10 @@ class ProductDebugResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+                "id" => $this->id,
+                "name" => $this->name,
+                "price" => $this->price
+        ];
     }
 }
