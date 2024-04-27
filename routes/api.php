@@ -35,11 +35,12 @@ Route::get('/categories-custom', function () {
 
 Route::get('/products/{id}', function ($id) {
     $product = \App\Models\Product::find($id);
+    $product->load("category");
     return (new \App\Http\Resources\ProductResource($product));
 });
 
 Route::get('/products', function (){
-    $products = \App\Models\Product::all();
+    $products = \App\Models\Product::with('category')->get();
     return new \App\Http\Resources\ProductCollection($products);
 });
 
