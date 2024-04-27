@@ -76,5 +76,7 @@ class ProductTest extends TestCase
                     "price" => $product->price,
                 ]
             ]);
+
+        self::assertNotNull($response->json("server_time"));
     }
 }
