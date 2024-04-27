@@ -32,3 +32,8 @@ Route::get('/categories-custom', function () {
     $categories = \App\Models\Category::all();
     return new \App\Http\Resources\CategoryCollection($categories);
 });
+
+Route::get('/products/{id}', function ($id) {
+    $product = \App\Models\Product::find($id);
+    return (new \App\Http\Resources\ProductResource($product));
+});
