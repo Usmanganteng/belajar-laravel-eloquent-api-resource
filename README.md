@@ -9,7 +9,7 @@
 
 <b>Requirement/Persyaratan</b>
 ---
-> #### Php versi 8
+> #### Php versi 8.1
 >> - Cara menginstal php dalam bahasa indonesia : <a href="https://youtu.be/Uw3ZGIMvIdA?si=mBVZ-lBnoCilASzo">install php
 >> - Cara menginstal php dalam bahasa inggris : <a href="https://youtu.be/MPRLUd8Pmyo?si=FqN54nVr4duH4Keg"> install php
 -----
